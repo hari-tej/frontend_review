@@ -1,0 +1,26 @@
+
+.mainpage{
+    margin:20%;
+    transform: translateX(50px,50px);
+  }
+
+#only{
+  background:linear-gradient(to right,red,orange,rgb(215, 215, 7));
+  background-size: 400% 400%;
+  padding:2%;
+  animation: gradient 5s ease infinite;
+  
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+

@@ -1,38 +1,68 @@
+*{
+  margin:0px;
+  padding:0px;
+ 
+}
+ 
+.Map{
+  background: linear-gradient(-45deg,rgb(5, 5, 91),rgb(84, 144, 201),rgb(199, 191, 191) );
+
+	
+}
+
+
 .App {
   text-align: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-top:10%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input button{
+  gap:50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cardio{
+  width:700px;
+  height:400px;
+  border:2px solid black;
+  margin:10px;
+  padding-top:5%;
+  padding-bottom:0%;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar{
+  color:blue;
+  background-color: grey;
+  text-align: center;
+  padding:50px;
+  box-shadow: 8px 8px 8px grey;
 }
 
-.App-link {
-  color: #61dafb;
+#e1{
+  width:70%;
+  height:auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#e2{
+  padding-left:0%;
+  padding-right:0%;
+  margin-top:10%;
+  height:70%;
+  width:80%;
 }
+
+#e3{
+  width:300px;
+  height:200px;
+}
+
+li a{
+  text-decoration: none;
+  font-size: larger;
+}
+
