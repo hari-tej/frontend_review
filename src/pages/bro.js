@@ -20,7 +20,7 @@ export const Bro = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/Bro/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/Bro/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -30,7 +30,7 @@ export const Bro = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/Bro/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/Bro/insert",{
       username:username,
       city:city,
       review:review,
@@ -42,14 +42,14 @@ export const Bro = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/Bro/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/Bro/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/Bro/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/Bro/delete/${id}`);
          window.location.reload();
    };
 

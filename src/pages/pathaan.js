@@ -16,7 +16,7 @@ export const Pathaan = () => {
  
     useEffect(()=>{
        
-         Axios.get("http://localhost:3003/Pathaan/read").then((response)=>{
+         Axios.get("https://movie-backend-kp39.onrender.com/Pathaan/read").then((response)=>{
            setDetails(response.data);
          });
       
@@ -26,7 +26,7 @@ export const Pathaan = () => {
  
     const addtoList=()=>{
    
-     Axios.post("http://localhost:3003/Pathaan/insert",{
+     Axios.post("https://movie-backend-kp39.onrender.com/Pathaan/insert",{
        username:username,
        city:city,
        review:review,
@@ -38,14 +38,14 @@ export const Pathaan = () => {
     };
  
     const updatereview=(id)=>{
-      Axios.put("http://localhost:3003/Pathaan/update",{
+      Axios.put("https://movie-backend-kp39.onrender.com/Pathaan/update",{
        id:id,
        review:updatedreview
       });
       window.location.reload();
     };
     const deletereview=(id)=>{
-          Axios.delete(`http://localhost:3003/Pathaan/delete/${id}`);
+          Axios.delete(`https://movie-backend-kp39.onrender.com/Pathaan/delete/${id}`);
           window.location.reload();
     };
     

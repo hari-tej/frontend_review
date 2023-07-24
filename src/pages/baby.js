@@ -19,7 +19,7 @@ export const Baby = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/Baby/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/Baby/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -29,7 +29,7 @@ export const Baby = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/Baby/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/Baby/insert",{
       username:username,
       city:city,
       review:review,
@@ -41,14 +41,14 @@ export const Baby = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/Baby/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/Baby/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/Baby/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/Baby/delete/${id}`);
          window.location.reload();
    };
 

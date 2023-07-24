@@ -16,7 +16,7 @@ export const Shezam = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/Shezam/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/Shezam/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -26,7 +26,7 @@ export const Shezam = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/Shezam/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/Shezam/insert",{
       username:username,
       city:city,
       review:review,
@@ -38,14 +38,14 @@ export const Shezam = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/Shezam/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/Shezam/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/Shezam/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/Shezam/delete/${id}`);
          window.location.reload();
    };
 

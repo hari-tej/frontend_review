@@ -16,7 +16,7 @@ export const Bhai = () => {
  
     useEffect(()=>{
        
-         Axios.get("http://localhost:3003/Bhai/read").then((response)=>{
+         Axios.get("https://movie-backend-kp39.onrender.com/Bhai/read").then((response)=>{
            setDetails(response.data);
          });
       
@@ -26,7 +26,7 @@ export const Bhai = () => {
  
     const addtoList=()=>{
    
-     Axios.post("http://localhost:3003/Bhai/insert",{
+     Axios.post("https://movie-backend-kp39.onrender.com/Bhai/insert",{
        username:username,
        city:city,
        review:review,
@@ -38,14 +38,14 @@ export const Bhai = () => {
     };
  
     const updatereview=(id)=>{
-      Axios.put("http://localhost:3003/Bhai/update",{
+      Axios.put("https://movie-backend-kp39.onrender.com/Bhai/update",{
        id:id,
        review:updatedreview
       });
       window.location.reload();
     };
     const deletereview=(id)=>{
-          Axios.delete(`http://localhost:3003/Bhai/delete/${id}`);
+          Axios.delete(`https://movie-backend-kp39.onrender.com/Bhai/delete/${id}`);
           window.location.reload();
     };
     

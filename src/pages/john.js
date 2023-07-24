@@ -16,7 +16,7 @@ export const John = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/John/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/John/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -26,7 +26,7 @@ export const John = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/John/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/John/insert",{
       username:username,
       city:city,
       review:review,
@@ -38,14 +38,14 @@ export const John = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/John/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/John/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/John/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/John/delete/${id}`);
          window.location.reload();
    };
 

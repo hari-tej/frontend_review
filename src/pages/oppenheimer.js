@@ -18,7 +18,7 @@ export const Oppenheimer = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/Oppenheimer/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/Oppenheimer/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -28,7 +28,7 @@ export const Oppenheimer = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/Oppenheimer/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/Oppenheimer/insert",{
       username:username,
       city:city,
       review:review,
@@ -40,14 +40,14 @@ export const Oppenheimer = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/Oppenheimer/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/Oppenheimer/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/Oppenheimer/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/delete/${id}`);
          window.location.reload();
    };
 

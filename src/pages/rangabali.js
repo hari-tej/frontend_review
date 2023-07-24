@@ -19,7 +19,7 @@ export const Ranga = () => {
 
    useEffect(()=>{
       
-        Axios.get("http://localhost:3003/Ranga/read").then((response)=>{
+        Axios.get("https://movie-backend-kp39.onrender.com/Ranga/read").then((response)=>{
           setDetails(response.data);
         });
      
@@ -29,7 +29,7 @@ export const Ranga = () => {
 
    const addtoList=()=>{
   
-    Axios.post("http://localhost:3003/Ranga/insert",{
+    Axios.post("https://movie-backend-kp39.onrender.com/Ranga/insert",{
       username:username,
       city:city,
       review:review,
@@ -41,14 +41,14 @@ export const Ranga = () => {
    };
 
    const updatereview=(id)=>{
-     Axios.put("http://localhost:3003/Ranga/update",{
+     Axios.put("https://movie-backend-kp39.onrender.com/Ranga/update",{
       id:id,
       review:updatedreview
      });
      window.location.reload();
    };
    const deletereview=(id)=>{
-         Axios.delete(`http://localhost:3003/Ranga/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/Ranga/delete/${id}`);
          window.location.reload();
    };
 
