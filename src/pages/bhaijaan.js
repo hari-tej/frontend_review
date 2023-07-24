@@ -120,7 +120,7 @@ export const Bhai = () => {
 
        }
        <br></br><br></br>
-       <h2 class="text-primary">More like this...</h2>
+       <h2 class="text-light">More like this...</h2>
        <div  className="container-lg ">
        <div className="col d-flex flex-direction-center justify-content-center">
          <div class="card m-5 shadow-lg" style={{width: 18+"rem"}}>
