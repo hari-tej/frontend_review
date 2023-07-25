@@ -22,7 +22,7 @@ export const Oppenheimer = () => {
           setDetails(response.data);
         });
      
-     
+      
       
    },[]);
 
@@ -35,7 +35,7 @@ export const Oppenheimer = () => {
       rating:rating
     });
   
-
+    window.location.reload();
 
    };
 
@@ -44,11 +44,11 @@ export const Oppenheimer = () => {
       id:id,
       review:updatedreview
      });
-   
+     window.location.reload();
    };
    const deletereview=(id)=>{
          Axios.delete(`https://movie-backend-kp39.onrender.com/Oppenheimer/delete/${id}`);
-        
+         window.location.reload(); 
    };
 
   return (
