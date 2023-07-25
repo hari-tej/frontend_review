@@ -47,7 +47,7 @@ export const Oppenheimer = () => {
    
    };
    const deletereview=(id)=>{
-         Axios.delete(`https://movie-backend-kp39.onrender.com/delete/${id}`);
+         Axios.delete(`https://movie-backend-kp39.onrender.com/Oppenheimer/delete/${id}`);
         
    };
 
