@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import{useState,useEffect} from 'react';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -15,16 +15,19 @@ export const Oppenheimer = () => {
    const[details,setDetails]=useState([]);
    const[updatedreview,setUpdatedreview]=useState("");
    
-
-   useEffect(()=>{
-      
-        Axios.get("https://movie-backend-kp39.onrender.com/Oppenheimer/read").then((response)=>{
+   const recorddata=useCallback(()=>{
+    Axios.get("https://movie-backend-kp39.onrender.com/Oppenheimer/read").then((response)=>{
           setDetails(response.data);
         });
      
-     
+
+   },[])
+
+   useEffect(()=>{
       
-   },[]);
+     recorddata();     
+      
+   },[recorddata]);
 
    const addtoList=()=>{
   
